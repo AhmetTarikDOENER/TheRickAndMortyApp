@@ -65,12 +65,18 @@ final class RMRequest {
     ///   - endpoint: Target endpoint
     ///   - pathComponents: Collection of path components
     ///   - queryParameters: Collection of query parameters
-    public init(endpoint: RMEndpoint, pathComponents: [String] = [], queryParameters: [URLQueryItem]) {
+    public init(
+        endpoint: RMEndpoint,
+        pathComponents: [String] = [],
+        queryParameters: [URLQueryItem]
+    ) {
         self.endpoint = endpoint
         self.pathComponents = pathComponents
         self.queryParameters = queryParameters
     }
     
+    /// Attempt to create request
+    /// - Parameter url: URL to parse
     convenience init?(url: URL) {
         let string = url.absoluteString
         if !string.contains(Constants.baseUrl) {
@@ -81,9 +87,14 @@ final class RMRequest {
         if trimmed.contains("/") {
             let components = trimmed.components(separatedBy: "/")
             if !components.isEmpty {
-                let endpointString = components[0]
+                let endpointString = components[0] // Endpoint
+                var pathComponents: [String] = []
+                if components.count > 1 {
+                    pathComponents = components
+                    pathComponents.removeFirst()
+                }
                 if let rmEndpoint = RMEndpoint(rawValue: endpointString) {
-                    self.init(endpoint: rmEndpoint, queryParameters: [URLQueryItem(name: "name", value: nil)])
+                    self.init(endpoint: rmEndpoint, pathComponents: pathComponents, queryParameters: [URLQueryItem(name: "name", value: nil)])
                     return
                 }
             }

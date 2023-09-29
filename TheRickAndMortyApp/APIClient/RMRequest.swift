@@ -126,4 +126,6 @@ final class RMRequest {
 
 extension RMRequest {
     static let listCharactersRequest = RMRequest(endpoint: .character, queryParameters: [])
+    
+    static let listEpisodesRequest = RMRequest(endpoint: .episode, queryParameters: [URLQueryItem(name: "name", value: nil)])
 }

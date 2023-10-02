@@ -16,6 +16,25 @@ enum RMSettingsOption: CaseIterable {
     case viewSeries
     case viewCode
     
+    var targetUrl: URL? {
+        switch self {
+        case .rateApp:
+            return nil
+        case .contactUs:
+            return URL(string: "https://www.google.com")
+        case .terms:
+            return URL(string: "https://www.google.com")
+        case .privacy:
+            return URL(string: "https://www.google.com")
+        case .apiReference:
+            return URL(string: "https://www.rickandmortyapi.com/documentation")
+        case .viewSeries:
+            return URL(string: "https://www.youtube.com")
+        case .viewCode:
+            return URL(string: "https://www.github.com")
+        }
+    }
+    
     var iconContainerColor: UIColor {
         switch self {
         case .rateApp:

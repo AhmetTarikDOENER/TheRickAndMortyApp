@@ -10,15 +10,34 @@ import UIKit
 /// Controller to show and search for locations
 final class RMLocationViewController: UIViewController {
 
+    
+    private let primaryView = RMLocationView()
+    
+    private let viewModel: RMLocationViewViewModel
+    
+    
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(primaryView)
         view.backgroundColor = .systemBackground
         title = "Locations"
         addSearchButton()
+        addConstraints()
     }
 
     private func addSearchButton() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(didTapSearch))
+    }
+    
+    private func addConstraints() {
+        NSLayoutConstraint.activate([
+            primaryView.topAnchor.constraint(equalTo: view.topAnchor),
+            primaryView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            primaryView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            primaryView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ])
     }
     
     @objc private func didTapSearch() {

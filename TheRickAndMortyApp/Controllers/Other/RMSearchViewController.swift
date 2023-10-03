@@ -63,7 +63,7 @@ class RMSearchViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Search", style: .done, target: self, action: #selector(didTapExecuteSearch))
     }
     
-    @objc private func didTapExecuteSearch() {
+    @objc private func didTapExecuteSearch() {
 //        viewModel.executeSearch()
     }
   

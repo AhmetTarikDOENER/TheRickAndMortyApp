@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		453240712ACD841000F9E81E /* RMSearchOptionPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453240702ACD841000F9E81E /* RMSearchOptionPickerViewController.swift */; };
 		4553FC5E2AC2044F009AFE0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4553FC5D2AC2044F009AFE0A /* AppDelegate.swift */; };
 		4553FC602AC2044F009AFE0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4553FC5F2AC2044F009AFE0A /* SceneDelegate.swift */; };
 		4553FC622AC2044F009AFE0A /* RMTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4553FC612AC2044F009AFE0A /* RMTabBarController.swift */; };
@@ -74,6 +75,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		453240702ACD841000F9E81E /* RMSearchOptionPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMSearchOptionPickerViewController.swift; sourceTree = "<group>"; };
 		4553FC5A2AC2044F009AFE0A /* TheRickAndMortyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheRickAndMortyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4553FC5D2AC2044F009AFE0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4553FC5F2AC2044F009AFE0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		453240722ACD850A00F9E81E /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				45B0147E2AC79BAC00CA797C /* RMSearchViewController.swift */,
+				453240702ACD841000F9E81E /* RMSearchOptionPickerViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		4553FC512AC2044F009AFE0A = {
 			isa = PBXGroup;
 			children = (
@@ -425,9 +436,9 @@
 		45E21A122AC380920064EF4D /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				453240722ACD850A00F9E81E /* Search */,
 				45E21A132AC380B00064EF4D /* RMCharacterDetailViewController.swift */,
 				45B0146F2AC77B2B00CA797C /* RMEpisodeDetailViewController.swift */,
-				45B0147E2AC79BAC00CA797C /* RMSearchViewController.swift */,
 				456D528A2ACC0AD800E63EA3 /* RMLocationDetailViewController.swift */,
 			);
 			path = Other;
@@ -549,6 +560,7 @@
 				4553FC7B2AC206EF009AFE0A /* RMCharacter.swift in Sources */,
 				45B014702AC77B2B00CA797C /* RMEpisodeDetailViewController.swift in Sources */,
 				456D528E2ACC0CE000E63EA3 /* RMLocationDetailView.swift in Sources */,
+				453240712ACD841000F9E81E /* RMSearchOptionPickerViewController.swift in Sources */,
 				4563344D2ACB1BB100D0356C /* RMLocationTableViewCellViewModel.swift in Sources */,
 				45B014762AC783E900CA797C /* RMEpisodeDetailView.swift in Sources */,
 				4553FCA42AC25762009AFE0A /* RMCharacterCollectionViewCellViewModel.swift in Sources */,

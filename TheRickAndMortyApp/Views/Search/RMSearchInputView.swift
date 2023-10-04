@@ -115,7 +115,6 @@ class RMSearchInputView: UIView {
         let tag = sender.tag
         let selected = options[tag]
         delegate?.rmSearchInputView(self, didSelectOption: selected)
-        print("did tap \(selected.rawValue)")
     }
     
     

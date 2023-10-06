@@ -33,10 +33,11 @@ final class RMSearchViewViewModel {
     
     public func executeSearch() {
         // For testing
-        searchText = "Rick"
+        print("Search text: \(searchText)")
+        
         // Build arguments
         var queryParams: [URLQueryItem] = [
-            URLQueryItem(name: "name", value: searchText)
+            URLQueryItem(name: "name", value: searchText.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed))
         ]
         // Add Options
         queryParams.append(contentsOf: optionMap.enumerated().compactMap({

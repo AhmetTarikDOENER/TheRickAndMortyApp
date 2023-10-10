@@ -187,11 +187,11 @@ extension RMSearchResultsView: UICollectionViewDelegate, UICollectionViewDataSou
         if currentViewModel is RMCharacterCollectionViewCellViewModel {
             // Character size
             let bounds = UIScreen.main.bounds
-            let width = (bounds.width - 30) / 2 /// So that every row has 2 cell
+            let width = UIDevice.isIphone ? (bounds.width - 30) / 2 : (bounds.width - 50) / 4 /// So that every row has 2 cell
             return CGSize(width: width, height: width * 1.5)
         }
         // Episode size
-        let width = bounds.width - 20
+        let width = UIDevice.isIphone ? bounds.width - 20 : (bounds.width - 30) / 2
         return CGSize(width: width, height: 100)
     }
     

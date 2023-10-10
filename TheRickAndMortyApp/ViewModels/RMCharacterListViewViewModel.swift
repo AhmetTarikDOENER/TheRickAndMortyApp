@@ -154,12 +154,10 @@ extension RMCharacterListViewViewModel: UICollectionViewDataSource, UICollection
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        // TODO: Abstract to extension
-        let isIphone = UIDevice.current.userInterfaceIdiom == .phone
         
         let bounds = collectionView.bounds
         let width: CGFloat
-        if isIphone {
+        if UIDevice.isIphone {
             width = (bounds.width - 30) / 2 /// So that every row has 2 cell; left middle right 10points margin
         } else {
             width = (bounds.width - 50) / 4
